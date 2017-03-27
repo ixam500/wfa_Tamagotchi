@@ -152,6 +152,7 @@
             this.btn_feed.TabIndex = 10;
             this.btn_feed.Text = "Füttern";
             this.btn_feed.UseVisualStyleBackColor = true;
+            this.btn_feed.Click += new System.EventHandler(this.btn_feed_Click);
             // 
             // btn_hit
             // 
@@ -161,6 +162,7 @@
             this.btn_hit.TabIndex = 11;
             this.btn_hit.Text = "Schlagen";
             this.btn_hit.UseVisualStyleBackColor = true;
+            this.btn_hit.Click += new System.EventHandler(this.btn_hit_Click);
             // 
             // btn_lightoff
             // 
@@ -170,6 +172,7 @@
             this.btn_lightoff.TabIndex = 12;
             this.btn_lightoff.Text = "Licht aus";
             this.btn_lightoff.UseVisualStyleBackColor = true;
+            this.btn_lightoff.Click += new System.EventHandler(this.btn_lightoff_Click);
             // 
             // btn_lighton
             // 
@@ -179,6 +182,7 @@
             this.btn_lighton.TabIndex = 13;
             this.btn_lighton.Text = "Licht an";
             this.btn_lighton.UseVisualStyleBackColor = true;
+            this.btn_lighton.Click += new System.EventHandler(this.btn_lighton_Click);
             // 
             // btn_gototoilet
             // 
@@ -208,6 +212,7 @@
             this.btn_givegzyklonb.TabIndex = 16;
             this.btn_givegzyklonb.Text = "Zyklon B geben";
             this.btn_givegzyklonb.UseVisualStyleBackColor = true;
+            this.btn_givegzyklonb.Click += new System.EventHandler(this.btn_givegzyklonb_Click);
             // 
             // gbx_treat
             // 
@@ -274,6 +279,10 @@
             this.tmr_meds.Enabled = true;
             this.tmr_meds.Interval = 15000;
             this.tmr_meds.Tick += new System.EventHandler(this.tmr_meds_Tick);
+            // 
+            // tmr_ageIncr
+            // 
+            this.tmr_ageIncr.Tick += new System.EventHandler(this.tmr_ageIncr_Tick);
             // 
             // frm_main
             // 
