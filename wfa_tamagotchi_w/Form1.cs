@@ -98,8 +98,14 @@ namespace wfa_tamagotchi_w
 
         private void tmr_food_Tick(object sender, EventArgs e)
         {
-            Tama.hunger = Tama.hunger - 1;
-            pgb_hungry.Update();
+            try
+            {
+                Tama.hunger = Tama.hunger - 1;
+                pgb_hungry.Value = Tama.hunger;
+            }
+            catch (Exception)
+            {
+            }
 
             if (Tama.hunger < 20)
             {
@@ -109,8 +115,14 @@ namespace wfa_tamagotchi_w
 
         private void tmr_fun_Tick(object sender, EventArgs e)
         {
-            Tama.happiness = Tama.happiness - 1;
-            pgb_happy.Update();
+            try
+            {
+                Tama.happiness = Tama.happiness - 1;
+                pgb_happy.Value = Tama.happiness;
+            }
+            catch (Exception)
+            {
+            }
 
             if (Tama.happiness < 20)
             {
@@ -140,6 +152,7 @@ namespace wfa_tamagotchi_w
             try
             {
                 Tama.hunger = Tama.hunger + 20;
+                pgb_hungry.Value = Tama.hunger;
             }
             catch (Exception ex)
             {
@@ -199,6 +212,7 @@ namespace wfa_tamagotchi_w
             //maybe, 5 or 6 right now, my dude
             //you are like a little baby        //watch this
             lbl_status.Text = "ｇｅｎｏｃｉｄｅ";
+            Application.Exit();
 
         }
     }

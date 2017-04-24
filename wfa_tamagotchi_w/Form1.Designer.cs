@@ -282,6 +282,7 @@
             // 
             // tmr_ageIncr
             // 
+            this.tmr_ageIncr.Interval = 1000;
             this.tmr_ageIncr.Tick += new System.EventHandler(this.tmr_ageIncr_Tick);
             // 
             // frm_main
